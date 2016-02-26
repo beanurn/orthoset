@@ -9,9 +9,9 @@ This repository is provided to document the analyses. The pipeline is highly cus
 
 
 ####Input data:
-Trinity<sup>1</sup> of Illumina RNAseq reads (fasta file)
+Trinity<sup>1</sup> assemblies of Illumina RNAseq reads (fasta file)
 
-Assembly (Newbler/Mira<sup>2</sup>/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
+Assemblies (Newbler/Mira<sup>2</sup>/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
 
 ####Additional Dependencies
 BLAST, Bowtie<sup>4</sup>, Clustal-omega<sup>5</sup>, MySQL, Muscle<sup>6</sup>,  RSEM<sup>7</sup>, Custal-omega<sup>8</sup>, PAL2NAL<sup>9</sup>, EMBOSS revseq and water, Gblocks<sup>10</sup>
@@ -66,12 +66,12 @@ Finally, determine the identity of the contig that has the longest orf per compo
 
 It might be a good idea to write this query to a temporary table ( bom_refseqs ) to speed up the next step.
 
-NB: This query will produce more than one 'reference' contig per component whenever there is more than one contig with the max total orf length per comp. This is true for several hundred components. Trinity_analyse_comp_batch.pl can handle this, because it gives reference status to the first 'reference' per comp that it encounters and compares all other contigs to this one. 
+NB: This query will produce more than one 'reference' contig per component whenever there is more than one contig with the max total orf length per comp. This is true for several hundred components. `Trinity_analyse_comp_batch.pl` can handle this, because it gives reference status to the first 'reference' per comp that it encounters and compares all other contigs to this one. 
 
 Then export all read-supported contigs that belong to the multiseq component defined above and highlight the reference contigs among them.
 
 	select ct.seq_name, ref.seq_id as 'ref' from zv_bom_trinity_w_rs as ct left join zv_bom_refseqs as ref using (seq_id) where comp_id in (select comp_id from zv_bom_multiseq_components) into outfile 'bom_crunch_contigs.txt';
 
-Copy this file to the home directory and run it through Trinity_crunch_input_file.pl to convert to old style contig names and to sort the contigs numerically. This is the input file for the crunch analysis.
+Copy this file to the home directory and run it through `Trinity_crunch_input_file.pl` to convert to old style contig names and to sort the contigs numerically. This is the input file for the crunch analysis.
 
 

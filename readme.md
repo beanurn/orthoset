@@ -31,13 +31,14 @@ MySQL tables: bom\_nmt_contigs, bom\_blastx\_xtrop, bom\_orfs, bom\_trinity\_rse
 
 ###Select the components and contigs that will be analysed in the Paralogue Filter
 
-All components that have at least one ORF and more than read-supported contig will be analysed in the paralogue filter
+...i.e. all components that have at least one ORF and more than one read-supported contig.
 
 Create a view that lists all contigs with read support:
 
 	create view zv_bom_trinity_w_rs as select seq_id, seq_name, comp_id from bom_nmt_contigs inner join bom_trinity_rsem using (seq_id) where fpkm > 0;
 
 Determine which components have orfs:
+
 	create view zv_bom_components_with_orf as select comp_id, count(*) as contigs from bom_nmt_contigs inner join bom_orfs using (seq_id) group by comp_id;
 
 and update table bom_components accordingly

@@ -8,8 +8,8 @@ This repository is provided to document the analyses. The pipeline is highly cus
 
 
 ####Input data:
-Illumina RNAseq reads, assembled with Trinity<sup>1</sup> (fasta file)
-Roche 454 RNA-seq reads, assembled Newbler/Mira<sup>2</sup>/CAP3<sup>3</sup> (fasta file)
-
+Illumina RNAseq reads, assembled with Trinity<sup>1</sup> (fasta file)\n
+Roche 454 RNA-seq reads, assembled Newbler/Mira<sup> 2</sup>/CAP3<sup>3</sup> (fasta file)
+ MySQL, 
 ####Additional Dependencies
-BLAST, Clustal-omega<sup>4</sup>, MySQL, Muscle<sup>5</sup>,  RSEM<sup>6</sup>, Custal-omega<sup>7</sup>, PAL2NAL<sup>8</sup>, EMBOSS revseq and water, Gblocks<sup>9</sup>
+BLAST, Clustal-omega<sup>4</sup>, Muscle<sup>5</sup>, MySQL, RSEM<sup>6</sup>, PAL2NAL<sup>7</sup>, EMBOSS revseq and water, Gblocks<sup>8</sup>

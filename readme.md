@@ -72,6 +72,6 @@ Then export all read-supported contigs that belong to the multiseq component def
 
 	select ct.seq_name, ref.seq_id as 'ref' from zv_bom_trinity_w_rs as ct left join zv_bom_refseqs as ref using (seq_id) where comp_id in (select comp_id from zv_bom_multiseq_components) into outfile 'bom_crunch_contigs.txt';
 
-Copy this file to the home directory and run it through `Trinity_crunch_input_file.pl` to convert to old style contig names and to sort the contigs numerically. This is the input file for the crunch analysis.
+Copy this file to the home directory and run it through `Trinity_crunch_input_file.pl` to convert to old style contig names, sort the contigs numerically and recodes the seq_ids (field 1) into either 1 (ref) or 0 (other). This is the input file for the crunch analysis.
 
 

@@ -7,9 +7,9 @@ Nürnberger, Lohse, Fijarczyk, Szymura and Blaxter. Para-allopatry in hybridisin
 This repository is provided to document the analyses. The pipeline is highly customised and would need extensive modification in order to be applied to other datasets. At present, there are no plans to turn this pipeline into a software tool. The rationale for the analyses is presented in the manuscript. 
 
 
-###Input data:
+####Input data:
 Illumina RNAseq reads, assembled with Trinity<sup>1</sup> (fasta file)
 Roche 454 RNA-seq reads, assembled Newbler/Mira<sup>2</sup>/CAP3<sup>3</sup> (fasta file)
 
-###Additional Dependencies
+####Additional Dependencies
 BLAST, Clustal-omega<sup>4</sup>, MySQL, Muscle<sup>5</sup>,  RSEM<sup>6</sup>, Custal-omega<sup>7</sup>, PAL2NAL<sup>8</sup>, EMBOSS revseq and water, Gblocks<sup>9</sup>

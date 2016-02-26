@@ -10,6 +10,7 @@ This repository is provided to document the analyses. The pipeline is highly cus
 
 ####Input data:
 Trinity<sup>1</sup> of Illumina RNAseq reads (fasta file)
+
 Assembly (Newbler/Mira<sup>2</sup>/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
 
 ####Additional Dependencies

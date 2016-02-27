@@ -5,7 +5,7 @@ This is a step-by-step guide to the bioinformatics analyses that generated a hig
 
 Nürnberger, Lohse, Fijarczyk, Szymura and Blaxter. Para-allopatry in hybridising fire-bellied toads (*Bombina bombina* and *B. variegata*): inference from transcriptome-wide coalescence analyses. [bioRxiv manuscript](http://biorxiv.org/content/early/2015/10/28/030056)
 
-This repository is provided to document the analyses. The pipeline is highly customised and would need extensive modification in order to be applied to other datasets. At present, there are no plans to turn this pipeline into a software tool. The rationale for the analyses is presented in the manuscript. 
+This repository is provided to document the analyses. The pipeline is highly customised and would need extensive modification before it could be applied to other datasets. The rationale for the analyses is presented in the manuscript. 
 
 
 ####Input data:

@@ -82,13 +82,13 @@ Place perl files into an analysis directory and create a subdirectory within it 
 Also, run `RSEM_results_sorted_by_comp_numerical.pl` to get a numerically sorted version of `RSEM.isoforms.results` (`bom_RSEM.isoforms.results.sorted`) and place this into `input_files` as well.
 
 For the pairwise analysis of contigs within components run `Trinity_analyse_comp_batch.pl`
-Make sure the path to MUSCLE is specified. Then run `Trinity_analyse_comp_batch.pl`. For each pair, it calls `Trinity_align_components4.pl`. It first does a MUSCLE alignment of the contigs, then defragments the alignment as required by calling `Trinity_defragment_alignments_2seq.pl` and finally collects BLASTX annotations and ORFs from the input files. These are appended to alignment file (.afa). The names of these alignments are written to a file `aligned_sequences.txt`. Every 50 alignments, this file is passed to `Trinity_analyse_components2.pl` which scans the alignments for biological feature and computes the sequence similarity in good and bad alignment stretches. These data are appended to `bom_component_crunch.txt`. 
+Make sure the path to MUSCLE is specified. For each pair, it calls `Trinity_align_components4.pl`. It first does a MUSCLE alignment of the contigs, then defragments the alignment as required by calling `Trinity_defragment_alignments_2seq.pl` and finally collects BLASTX and ORF annotations from the input files. These are appended to alignment file (.afa). The names of these alignments are written to a file `aligned_sequences.txt`. Every 50 alignments, this file is passed to `Trinity_analyse_components2.pl` which scans the alignments for biological feature and computes the sequence similarity in good and bad alignment stretches. These data are appended to `bom_component_crunch.txt`. 
 
 The command line for `Trinity_analyse_comp_batch.pl`is 
 
 	perl Trinity_analyse_comp_batch.pl <fn> <start_comp> <stop_comp>
 
-where <fn> is `bom_crunch_contigs.txt.sorted`. The taxon identifier is extracted from this filename. <start_comp> and <end_comp> define the subset of the components to be analysed. Choose the first component as start and a non-existent end component to run the analysis for all components in the input file.
+where fn is `bom_crunch_contigs.txt.sorted`. The taxon identifier is extracted from this filename. start_comp and end_comp define the subset of the components to be analysed. Choose the first component as start and a non-existent end component to run the analysis for all components in the input file.
 
 
 

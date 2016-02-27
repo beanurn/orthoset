@@ -88,7 +88,7 @@ The command line for `Trinity_analyse_comp_batch.pl`is
 
 	perl Trinity_analyse_comp_batch.pl <fn> <start_comp> <stop_comp>
 
-where <fn> is `bom_crunch_contigs.txt.sorted`. The taxon identified is extracted from this filename. <start_comp> and <end_comp> define the subset of the components to be analysed. Choose the first component as start and a non-existent end component to run the analysis for all components in the input file.
+where <fn> is `bom_crunch_contigs.txt.sorted`. The taxon identifier is extracted from this filename. <start_comp> and <end_comp> define the subset of the components to be analysed. Choose the first component as start and a non-existent end component to run the analysis for all components in the input file.
 
 
 

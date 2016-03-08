@@ -25,9 +25,9 @@ A MySQL database is used to store for each taxon information about contigs, Blas
 
 	blastx -db /.../xtropicalis/xtropProtein -query Trinity.fasta -evalue 0.01 -outfmt '6 qseqid qlen sseqid slen frames pident nident length mismatch gapopen qstart qend sstart send evalue bitscore' -out Bb_blastx_xt.out -num_threads 6 -max_target_seqs 100
 	/.../trinity/trinity-plugins/transdecoder/TransDecoder -t Trinity.fasta &
-	/.../trinity/trinity-2013-11-10/util/RSEM\_util/run\_RSEM\_align\_n\_estimate --transcripts <fn> --seqType fq --left <(gunzip -c <fn>)  --right <(gunzip -c <fn>) --output_dir <dirname>
+	/.../trinity/util/align_and_estimate_abundance.pl --transcripts Bbom_trinity_140915_clean.fasta --seqType fq --left <(zcat ../Bbom_cut_trim_paired_1.fq.gz) --right <(zcat ../Bbom_cut_trim_paired_2.fq.gz) --est_method RSEM --aln_method bowtie --max_ins_size 500 --output_dir RSEM_paired --trinity_mode --prep_reference &
 
-MySQL tables: bom\_nmt_contigs, bom\_blastx\_xtrop, bom\_orfs, bom\_trinity\_rsem
+MySQL tables: bom\_nmt\_contigs, bom_blastx\_xtrop, bom\_orfs, bom\_trinity\_rsem
 
 ###Select the components and contigs that will be analysed in the Paralogue Filter
 

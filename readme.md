@@ -5,16 +5,16 @@ This is a step-by-step guide to the bioinformatics analyses that generated a hig
 
 Nürnberger, Lohse, Fijarczyk, Szymura and Blaxter. Para-allopatry in hybridising fire-bellied toads (*Bombina bombina* and *B. variegata*): inference from transcriptome-wide coalescence analyses. [bioRxiv manuscript](http://biorxiv.org/content/early/2015/10/28/030056)
 
-This repository is provided to document the analyses. The pipeline is highly customised and would need extensive modification before it could be applied to other datasets, and there is no guarantee that it would work seamlessly with newer software versions. The rationale for the analyses is presented in the manuscript. We also provide a MySQL dump of the database that was used for these analyses (`bombina.sql.gz`).
+This repository is provided to document the analyses. The pipeline is highly customised and would need extensive modification before it could be applied to other datasets. The rationale for the analyses is presented in the manuscript. We also provide a MySQL dump of the database that was used for these analyses (`bombina.sql.gz`).
 
 
 ####Input data:
-Trinity<sup>1</sup> (v.2014-04-13p1) assemblies of Illumina RNAseq reads (fasta file)
+Trinity<sup>1</sup> (v.2014-04-13p1) assemblies of Illumina RNA-seq reads (fasta file)
 
-Assemblies (Newbler/Mira<sup>2</sup> (v.3)/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
+Assemblies (Newbler/Mira<sup>2</sup>(v.3)/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
 
 ####Dependencies
-BLAST (v.2.2.26), Bowtie1 <sup>4</sup> (v.1.0.0), EMBOSS<sup>5</sup> revseq, MCL<sup>6</sup> (v14-137), Muscle<sup>7</sup> (v3.8.31), MySQL (v5.5.47), OrthoMCL<sup>8</sup> (v2.0.9), RSEM<sup>9</sup> (v1.2.25).
+BLAST (v.2.2.26), Bowtie1<sup>4</sup> (v.1.0.0), EMBOSS<sup>5</sup> revseq, MCL<sup>6</sup> (v14-137), Muscle<sup>7</sup> (v3.8.31), MySQL (v5.5.47), OrthoMCL<sup>8</sup> (v2.0.9), RSEM<sup>9</sup> (v1.2.25).
 
 
 ###Import of assembly data into a MySQL database

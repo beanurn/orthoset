@@ -121,7 +121,7 @@ Each 454 paralogue is given a new name which 'adds' it to the Trinity component 
 
 Per taxon the contigset is a concatenation of the following subsets: Trinity refseqs (from file `bom_crunch_contigs.txt`), Trinity paralogues and, if available, Roche 454 refseqs (not really a good term, these are the 'non-paralogues') and Roche 454 paralogues. For the OrthoMCL analysis, it is very important that there are no duplicate entries for any contig (the programme will crash otherwise). Use `check_no_dups_in_seqset.pl` to make sure. Run the TransDecoder analysis as before to identify ORFs.
 
-For contigs with ORFS in plus and minus orientation, only the orientation with the longer total ORF length was kept, because it would not have been desirable for our analysis to obtain more than one cluster from any one one contig set. The 'majority orientation' is recorded in the component_crunch tables in the MySQL database and extracted as follows:
+For contigs with ORFS in plus and minus orientation, only the orientation with the longer total ORF length was kept, because it would not have been desirable for our analysis to obtain more than one cluster from any one set of orthologous contigs. The 'majority orientation' is recorded in the component_crunch tables in the MySQL database and extracted as follows:
 
 	select distinct CONCAT ('component','_','seqno') as contig, orientation from bom_component_crunch into outfile 'bom_trinity_orientation.txt';
 	select distinct select seq_name, 454dir, orientation from bom_component_crunch454 into outfile 'bom_454_orientation';

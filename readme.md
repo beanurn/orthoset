@@ -14,7 +14,7 @@ Trinity<sup>1</sup> (v.2014-04-13p1) assemblies of Illumina RNAseq reads (fasta 
 Assemblies (Newbler/Mira<sup>2</sup> (v.3)/CAP3<sup>3</sup>) of Roche 454 RNA-seq reads (fasta file)
 
 ####Dependencies
-BLAST (v.2.2.26), Bowtie1 <sup>4</sup> (v.1.0.0), EMBOSS<sup>5</sup> revseq, MCL<sup>6</sup> (v14-137), Muscle<sup>7</sup> (v3.8.31), MySQL (v5.5.47), OrthoMCL<sup>8<sup> (v2.0.9), RSEM<sup>9</<sup> (v1.2.25).
+BLAST (v.2.2.26), Bowtie1 <sup>4</sup> (v.1.0.0), EMBOSS<sup>5</sup> revseq, MCL<sup>6</sup> (v14-137), Muscle<sup>7</sup> (v3.8.31), MySQL (v5.5.47), OrthoMCL<sup>8</sup> (v2.0.9), RSEM<sup>9</<sup> (v1.2.25).
 
 
 ###Import of assembly data into a MySQL database

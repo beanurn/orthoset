@@ -98,7 +98,7 @@ Export reference contigs and paralogues as follows. Create a temporary table of 
 	select distinct seq_name from bom_paralogues into outfile 'bom_paralogues.txt';
 
 
-###Identify paralogues among contigs from Roche 454 assembly
+###Identify paralogues among contigs from the Roche 454 assembly
 
 First generate a BLAST database from the Trinity reference contigs (see previous section). Use BLASTN to search this database with the Roche 454 contigs:
 

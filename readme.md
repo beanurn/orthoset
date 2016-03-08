@@ -21,7 +21,7 @@ BLAST (v.2.2.26), Bowtie1<sup>4</sup> (v.1.0.0), EMBOSS<sup>5</sup> revseq, MCL<
 
 Up to the point of the OrthoMCL analysis, the pipeline is presented for one of the taxa, *Bombina bombina*.
 
-A MySQL database is used to store for each taxon information about contigs, Blastx hits to the *Silurana (Xenopus) tropicalis* proteome, predicted open reading frames (ORFs) and read coverage. The latter two analyses are carried out with packages that are bundled with Trinity (see for further information). Here are the commands:
+A MySQL database is used to store for each taxon information about contigs, Blastx hits to the *Silurana (Xenopus) tropicalis* proteome, predicted open reading frames (ORFs) and read coverage. The latter two analyses are carried out with packages that are bundled with Trinity (see [here](https://github.com/trinityrnaseq/trinityrnaseq/wiki) for further information). Here are the commands:
 
 	blastx -db /.../xtropicalis/xtropProtein -query Trinity.fasta -evalue 0.01 -outfmt '6 qseqid qlen sseqid slen frames pident nident length mismatch gapopen qstart qend sstart send evalue bitscore' -out Bb_blastx_xt.out -num_threads 6 -max_target_seqs 100
 	/.../trinity/trinity-plugins/transdecoder/TransDecoder -t Trinity.fasta &
